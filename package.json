@@ -1,9 +1,12 @@
 {
   "name": "generator",
   "version": "1.0.0",
-  "main": "index.js",
-  "module": "es2022",
   "type": "module",
+  "module": "es2022",
+  "tsup": {
+    "target" : "es2022",
+    "format" : "esm"
+  },
   "dependencies": {
     "@types/lodash-es": "^4.17.6",
     "lodash-es": "^4.17.21"
@@ -15,8 +18,8 @@
   },
   "scripts": {
     "dev" : "tsx --watch src/Index.js",
-    "build" : "tsup "
-    "start": "node dist/src/Index.js",
+    "build" : "tsup src",
+    "start": "node dist/Index.js",
     "test": "vitest"
   },
   "keywords": [],

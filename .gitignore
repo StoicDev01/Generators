@@ -2,3 +2,4 @@
 ./scrape/extracted/*
 !*/1.README
 node_modules
+dist

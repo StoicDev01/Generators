@@ -1,4 +1,4 @@
-import { test, describe, expect, beforeEach, beforeAll } from "@jest/globals"
+import { test, describe, expect, beforeEach, beforeAll } from "vitest"
 import Character from "../src/Character"
 import CharacterBase, { CharacterBaseData } from "../src/CharacterBase"
 import path from "path"

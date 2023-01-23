@@ -1,6 +1,6 @@
 import { randomChoice } from "./Choice.js";
 
-export class Markov<T>{
+export default class Markov<T>{
     public data : Map<T,T[]>
     
     constructor(){

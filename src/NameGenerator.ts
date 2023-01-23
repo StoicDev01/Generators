@@ -1,5 +1,5 @@
 import { readFileSync } from "fs";
-import { Markov } from "./Markov.js"
+import Markov  from "./Markov.js"
 import { LoadText } from "./Utils.js";
 
 

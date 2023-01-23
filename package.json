@@ -1,0 +1,26 @@
+{
+  "name": "generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "module": "es2022",
+  "type": "module",
+  "dependencies": {
+    "@types/lodash-es": "^4.17.6",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "tsup": "^6.5.0",
+    "tsx": "^3.12.2",
+    "vitest": "^0.28.1"
+  },
+  "scripts": {
+    "dev" : "tsx --watch src/Index.js",
+    "build" : "tsup "
+    "start": "node dist/src/Index.js",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

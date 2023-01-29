@@ -1,0 +1,923 @@
+{
+    "AttributeGroups": {
+      "Main Attributes": {
+        "name": {
+          "type": "nameGenerator",
+          "neuter": "USNames.txt",
+          "order": 2
+        },
+        "race" : {
+            "type" : "randomChoice",
+            "choicesType" : "characteristic",
+            "choices" : [
+                {
+                    "name": "Human",
+                    "description": "<pronoun> is a human, and is known for their adaptability and versatility. They can thrive in different locations and cultures, and possess a great drive for progress and innovation. Humans are often depicted as ambitious and resourceful, but can also be prone to greed and prejudice."
+                },
+                {
+                    "name": "Elf",
+                    "description": "<pronoun> is an elf, known for their grace and elegance. They possess a natural affinity for magic, and have a deep connection to the natural world. Elves are often portrayed as peaceful and wise, but can also be haughty and aloof. They are known to live longer than humans and have a keen sense of hearing and vision."
+                },
+                {
+                    "name": "Dwarf",
+                    "description": "<pronoun> is a dwarf, known for their sturdy and dependable nature. Dwarves are renowned for their skill in crafting and mining, as well as their love of ale and gold. They are often depicted as stubborn and hard-working, but can also be greedy and miserly. Dwarves are typically shorter than humans and have a strong resistance to poison and disease."
+                },
+                {
+                    "name": "Orc",
+                    "description": "<pronoun> is an orc, known for their fierce and formidable nature. Their brutal strength makes them feared by many, but they are also depicted as having a code of honor. Though often portrayed as evil, some orcs may have a more noble and honorable side. They are known to have a natural toughness and endurance, but may also be hot-headed and prone to violence."
+                },
+                {
+                    "name": "Goblin",
+                    "description": "<pronoun> is a goblin, known for their cunning and mischievous nature. They have a knack for mechanics and a love of causing trouble, and often work as thieves or mercenaries. Goblins are often portrayed as small and cunning, but also as greedy and selfish. They are known for their quick reflexes and agility, but may also be cowardly and untrustworthy."
+                }                
+            ]
+        },
+        "age": {
+          "type": "randomRange",
+          "min": 5,
+          "max": 99,
+          "order": 1
+        },
+        "gender": {
+          "type": "randomChoice",
+          "choicesType": "string",
+          "choices": [
+            "Female",
+            "Male"
+          ],
+          "order": 1
+        },
+        "height": {
+          "type": "normalDistribution",
+          "distributionType": "height",
+          "med": 1.75,
+          "variation": 0.25,
+          "min": 1.2,
+          "max": 2.1
+        },
+        "weight": {
+          "type": "randomWeight",
+          "min": 40,
+          "max": 120
+        },
+        "profession": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "choices": [
+            {
+                "name": "Warrior",
+                "description": "<pronoun> is a warrior, trained in the art of combat and warfare. <pronoun> possesses great strength and courage, and is often hired to protect the weak and defend the innocent."
+            },
+            {
+                "name": "Mage",
+                "description": "<pronoun> is a mage, a wielder of magic and arcane knowledge. <pronoun> is able to cast spells and summon creatures, and is often sought after for <possessive_pronoun> power and wisdom."
+            },
+            {
+                "name": "Cleric",
+                "description": "<pronoun> is a cleric, a servant of a deity or divine power. <pronoun> is able to heal the sick and wounded, and is often called upon to perform religious rites and ceremonies."
+            },
+            {
+                "name": "Thief",
+                "description": "<pronoun> is a thief, known for <possessive_pronoun> stealth and cunning. <pronoun> is able to pick locks and pockets, and is often hired to obtain valuable items or information."
+            },
+            {
+                "name": "Merchant",
+                "description": "<pronoun> is a merchant, skilled in the art of commerce and trade. <pronoun> is able to buy and sell goods and negotiate favorable deals, and is often seen as a savvy and successful businessman."
+            },
+            {
+                "name": "Blacksmith",
+                "description": "<pronoun> is a blacksmith, a master of metalworking and forge craft. <pronoun> is able to forge weapons and armor, and is often sought after for <possessive_pronoun> skill and expertise."
+            },
+            {
+                "name": "Bard",
+                "description": "<pronoun> is a bard, a performer and storyteller. <pronoun> is able to play musical instruments and recite poems, and is often hired to entertain and delight audiences."
+            },
+            {
+                "name": "Ranger",
+                "description": "<pronoun> is a ranger, a protector of the wilderness and wildlife. <pronoun> is able to track and hunt, and is often called upon to defend the natural world from harm."
+            },
+            {
+                "name": "Paladin",
+                "description": "<pronoun> is a paladin, a champion of justice and righteousness. <pronoun> is able to wield holy magic, and is often seen as a shining symbol of hope and bravery."
+            },
+            {
+                "name": "Alchemist",
+                "description": "<pronoun> is an alchemist, a master of potions and transmutations. <pronoun> is able to create elixirs and potions, and is often sought after for <possessive_pronoun> knowledge of the natural world."
+            },
+            {
+                "name": "Scribe",
+                "description": "<pronoun> is a scribe, a master of writing and calligraphy. <pronoun> is able to copy and preserve texts, and is often sought after for <possessive_pronoun> knowledge of history and literature."
+            },
+            {
+                "name": "Assassin",
+                "description": "<pronoun> is an assassin, a master of stealth and assassination. <pronoun> is able to eliminate targets with precision and efficiency, and is often hired to carry out deadly missions."
+            },
+            {
+                "name": "Druid",
+                "description": "<pronoun> is a druid, a protector of the natural world. <pronoun> is able to wield magic to defend the environment, and is often seen as a defender of the earth and its creatures."
+            },
+            {
+                "name": "Monk",
+                "description": "<pronoun> is a monk, a master of martial arts and inner peace. <pronoun> is able to defend himself with speed and agility, and is often seen as a spiritual warrior."
+            },
+            {
+                "name": "Illusionist",
+                "description": "<pronoun> is an illusionist, a master of trickery and deception. <pronoun> is able to create convincing illusions, and is often sought after for <possessive_pronoun> ability to entertain and mystify."
+            },
+            {
+                "name": "Witch",
+                "description": "She is a witch, a master of magic and spellcasting. She is able to cast spells and curses, and is often feared for her mysterious powers."
+            },
+            {
+                "name": "Cleric",
+                "description": "<pronoun> is a cleric, a servant of a deity. <pronoun> is able to wield divine magic, and is often seen as a spiritual leader and counselor."
+            },
+            {
+                "name": "Mercenary",
+                "description": "<pronoun> is a mercenary, a master of combat and warfare. <pronoun> is able to fight for hire, and is often sought after for <possessive_pronoun> fighting skills and experience."
+            },
+            {
+                "name": "Enchanter",
+                "description": "<pronoun> is an enchanter, a master of magic and enchantment. <pronoun> is able to imbue objects with magical properties, and is often sought after for <possessive_pronoun> ability to create powerful items."
+            },
+            {
+                "name": "King or Queen",
+                "description": "<pronoun> is the king or queen, a ruler of a kingdom. <pronoun> is responsible for the safety and prosperity of <possessive_pronoun> people, and is often seen as a symbol of authority and power."
+            },
+            {
+                "name": "Bard",
+                "description": "<pronoun> is a bard, a master of music and storytelling. <pronoun> is able to entertain and inspire, and is often sought after for <possessive_pronoun> ability to captivate an audience."
+            },
+            {
+                "name": "Ranger",
+                "description": "<pronoun> is a ranger, a master of the wilderness. <pronoun> is able to survive and thrive in the wild, and is often sought after for <possessive_pronoun> skills as a tracker and hunter."
+            },
+            {
+                "name": "Summoner",
+                "description": "<pronoun> is a summoner, a master of the arcane. <pronoun> is able to summon creatures from other dimensions, and is often sought after for <possessive_pronoun> ability to control powerful beings."
+            }
+          ]
+        }
+      },
+      "Appearence": {
+        "hair shape": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "choices": [
+            {
+              "name": "curly medium hair",
+              "description": "<pronoun> has a head of curly, medium-length hair. The curls are bouncy and defined, and the hair has a lot of volume and movement."
+            },
+            {
+              "name": "straight long hair",
+              "description": "<pronoun> has long, straight hair that falls to <possessive_pronoun> waist. The hair is smooth and shiny, and has a sleek, polished look."
+            },
+            {
+              "name": "wavy short hair",
+              "description": "<pronoun> has short, wavy hair that is cut just above the ears. The waves are loose and messy, giving the hair a laid-back, casual appearance."
+            },
+            {
+              "name": "pixie cut",
+              "description": "<pronoun> has a pixie cut, which is a very short, choppy haircut with layers. The hair is shorter at the back and sides, and a bit longer on top. It has a edgy, modern look."
+            },
+            {
+              "name": "updo",
+              "description": "<pronoun> has <possessive_pronoun> hair styled in an updo, which is a hairstyle where the hair is pinned up at the top of the head, leaving little or no hair hanging down. It's a formal, elegant style often worn to special occasions."
+            },
+            {
+              "name": "french braid",
+              "description": "<pronoun> has a french braid, which is a type of braid that starts at the back of the head and is made by adding sections of hair to the braid as it is braided. It has a chic, sophisticated look."
+            },
+            {
+              "name": "cornrows",
+              "description": "<pronoun> has cornrows, which is a hairstyle where the hair is divided into thin braids and braided close to the scalp, forming parallel rows. It's a traditional hairstyle with African origins."
+            },
+            {
+              "name": "dreadlocks",
+              "description": "<pronoun> has dreadlocks, which are thick braids of hair that resemble ropes. They are created by braiding the hair and allowing it to mat and tangle over time."
+            },
+            {
+              "name": "afro",
+              "description": "<pronoun> has an afro, which is a hairstyle where the hair is combed up and out, forming a sphere of voluminous hair. It's a bold, distinctive style often associated with the African-American community."
+            },
+            {
+              "name": "curly bob",
+              "description": "<pronoun> has a curly bob, which is a short haircut with layers and curls. The hair is cut to the jawline or just below, and the curls are bouncy and defined. It has a fun, playful look."
+            },
+            {
+              "name": "side swept bangs",
+              "description": "<pronoun> has side swept bangs, which are a type of fringe that is swept to the side. The bangs are cut straight across the forehead and then brushed to one side, covering part of the forehead. They add a touch of glamour and femininity to the hairstyle."
+            },
+            {
+              "name": "bun",
+              "description": "<pronoun> has <possessive_pronoun> hair styled in a bun, which is a hairstyle where the hair is gathered and twisted into a knot at the back or top of the head. It can be a low bun at the nape of the neck, a mid-level bun at the crown of the head, or a high bun at the top of the head. It's a versatile, elegant style that can be worn for formal or casual occasions."
+            },
+            {
+              "name": "ponytail",
+              "description": "<pronoun> has <possessive_pronoun> hair styled in a ponytail, which is a hairstyle where the hair is gathered and secured with a hair tie at the back of the head. The ponytail can be high, mid-level, or low, and can be worn smooth and sleek or with volume and texture. It's a simple, practical style that is easy to create and maintain."
+            },
+            {
+                "name": "Bowl Cut",
+                "description": "It is a simple, short cut that resembles a bowl, often worn by commoners and peasants."
+            }
+          ]
+        },
+        "hair color": {
+          "type": "randomChoice",
+          "choicesType": "string",
+          "choices": [
+            "Blonde",
+            "Black",
+            "Brown",
+            "Red",
+            "Gray"
+          ]
+        },
+        "eye color": {
+          "type": "randomChoice",
+          "choicesType": "string",
+          "choices": [
+            "Blue",
+            "Black",
+            "Brown",
+            "Green",
+            "Gray"
+          ]
+        },
+        "face shape": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "choices": [
+            {
+              "name": "round",
+              "description": "<pronoun> has a round face with full, curved cheeks and a rounded chin. <possessive_pronoun> face is roughly as wide as it is long."
+            },
+            {
+              "name": "oval",
+              "description": "<pronoun> has an oval face, which is a long, slender face shape with a slightly rounded chin and high cheekbones. It is considered a balanced and harmonious face shape."
+            },
+            {
+              "name": "square",
+              "description": "<pronoun> has a square face with a strong, defined jawline and a broad forehead. <possessive_pronoun> face is roughly as wide as it is long."
+            },
+            {
+              "name": "heart-shaped",
+              "description": "<pronoun> has a heart-shaped face, which is a face shape characterized by a wide forehead and high cheekbones that taper down to a narrow chin."
+            },
+            {
+              "name": "triangular",
+              "description": "<pronoun> has a triangular face, which is a face shape with a narrow forehead and a wide jawline and chin. It is also sometimes called a pear-shaped face."
+            },
+            {
+              "name": "oblong",
+              "description": "<pronoun> has an oblong face, which is a long and narrow face shape with a slightly pointed chin. It is also sometimes called a rectangle face shape."
+            },
+            {
+              "name": "diamond",
+              "description": "<pronoun> has a diamond face, which is a face shape with a narrow forehead and jawline and prominent cheekbones. It is a rare face shape."
+            }
+          ]
+        },
+        "skin color": {
+          "type": "randomChoice",
+          "choicesType": "string",
+          "choices": [
+            "Fair",
+            "Olive",
+            "Tan",
+            "Dark",
+            "green",
+            "white"
+          ]
+        },
+        "body shape": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "choices": [
+            {
+              "name": "slim",
+              "description": "<pronoun> has a slim body with a slender build and minimal muscle definition. <pronoun> generally has a small frame and a low body fat percentage."
+            },
+            {
+              "name": "athletic",
+              "description": "<pronoun> has an athletic body with well-defined muscles and a toned appearance. <pronoun> generally has a medium to large frame and a low to moderate body fat percentage."
+            },
+            {
+              "name": "curvy",
+              "description": "<pronoun> has a curvy body with full hips, a defined waist, and ample buttocks. <pronoun> generally has a medium to large frame and a moderate to high body fat percentage."
+            },
+            {
+              "name": "pear-shaped",
+              "description": "<pronoun> has a pear-shaped body with a smaller upper body and wider hips and buttocks. <pronoun> generally has a small to medium frame and a moderate to high body fat percentage."
+            },
+            {
+              "name": "hourglass",
+              "description": "<pronoun> has an hourglass body with a defined waist and full hips and bust. <pronoun> generally has a medium to large frame and a moderate body fat percentage."
+            },
+            {
+              "name": "rectangle",
+              "description": "<pronoun> has a rectangle body with little definition in the waist and an overall rectangular shape. <pronoun> generally has a medium to large frame and a moderate to high body fat percentage."
+            },
+            {
+              "name": "apple",
+              "description": "<pronoun> has an apple body shape with a round midsection and a tendency to carry excess weight in the abdomen. <pronoun> generally has a medium to large frame and a high body fat percentage."
+            }
+          ]
+        },
+        "scars": {
+          "chance": 0.2,
+          "min" : 0,
+          "max" : 1,
+          "type": "randomChoice",
+          "choicesType": "string",
+          "choices": [
+            {
+                "name": "Forehead Scar",
+                "description": "<pronoun> has a long, straight scar located on the forehead, often caused by a falling object or head injury."
+            },
+            {
+                "name": "Cheek Scar",
+                "description": "<pronoun> has a jagged scar located on the cheek, often caused by a slash from a weapon."
+            },
+            {
+                "name": "Arm Scar",
+                "description": "<pronoun> has a long, straight scar located on the arm, often caused by a slash from a weapon."
+            },
+            {
+                "name": "Torso Scar",
+                "description": "<pronoun> has a round scar located on the torso, often caused by a stab from a weapon."
+            },
+            {
+                "name": "Back Scar",
+                "description": "<pronoun> has a long, jagged scar located on the back, often caused by a whip or other flaying tool."
+            }
+            
+          ]
+        },
+        "clothing": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min" : 3,
+          "choices": [
+            {
+                "name" : "Ripped Shirt",
+                "description" : "He has a ripped shirt made of rough cotton or linen, a common sign of poverty or rough living conditions. The holes and tears have been roughly patched up, but the fabric is still visibly frayed."
+            },
+            {
+                "name" : "Tunic",
+                "description" : "He is wearing a knee-length tunic made of a coarse wool or linen fabric. The tunic has a simple cut with a loose fit, and the hem and sleeves are typically left unfinished. The tunic is fastened at the neck with a simple cord and has a plain design, typical of clothing worn by peasants and lower-class citizens."
+            },
+            {
+                "name" : "Chainmail",
+                "description" : "He is wearing a chainmail shirt made of interlocking metal rings. The chainmail covers his torso and reaches down to his hips, providing protection against swords, axes, and other weapons. The rings are carefully woven together to create a flexible yet durable armor, and the shirt is worn over a padded gambeson for added comfort and protection."
+            },
+            {
+                "name" : "Leather Armor",
+                "description" : "He is wearing leather armor made from tanned hide. The armor consists of a breastplate, shoulder plates, and greaves for the legs, all designed for mobility and flexibility. The leather is treated to resist water and wear, and the armor is fastened with laces or buckles at the side."
+            },
+            {
+                "name" : "Robe",
+                "description" : "He is wearing a long, flowing robe made of a heavy wool or silk fabric. The robe is a deep, rich color and is trimmed with intricate embroidery or fur. The robe is fastened at the waist with a cord or sash, and the sleeves are wide and full, often reaching the floor. The robe is commonly worn by members of the clergy or other dignitaries as a symbol of their status and authority."
+            },
+            {
+                "name" : "Doublet",
+                "description" : "He is wearing a close-fitting, short jacket called a doublet. The doublet is made of a luxurious fabric, such as velvet or silk, and is often heavily decorated with buttons, trim, or other embellishments. The doublet is worn over a shirt and is a popular choice for nobles and other members of the upper class."
+            },
+            {
+                "name" : "Cloak",
+                "description" : "He is wearing a long, flowing cloak that is draped over his shoulders. The cloak is made of a warm fabric, such as wool or fur, and is fastened at the neck with a brooch or clasp. The cloak provides protection from the elements and is a common garment for travelers or those who spend a lot of time outdoors."
+            },
+            {
+                "name" : "Breeches",
+                "description" : "He is wearing a pair of close-fitting pants called breeches. The breeches are made of a sturdy fabric, such as leather or canvas, and are worn to provide additional protection and warmth to the legs. The breeches are typically worn with tall boots or hose and a tunic or doublet."
+            },
+            {
+                "name" : "Hose",
+                "description" : "He is wearing a pair of tight-fitting pants called hose. The hose are made of a stretchy fabric, such as wool or silk, and are worn to provide a snug fit and improved mobility. The hose are typically worn with a tunic or doublet and a pair of tall boots."
+            },
+            {
+                "name" : "Crown",
+                "description" : "He is wearing a crown made of gold or silver, set with precious gems and adorned with intricate designs. The crown is a symbol of royalty and signifies the wearer's status as a monarch or ruler. The crown is typically worn on formal occasions and during coronations."
+            },
+            {
+                "name" : "Metal Armor",
+                "description" : "He is wearing a suit of armor made of steel or other metal. The armor provides protection from weapons and is typically worn by soldiers, knights, and other warriors. The armor may include a helmet, gauntlets, greaves, a breastplate, and other components, all of which are designed to provide maximum protection."
+            },
+            {
+                "name" : "Warrior's Tunic",
+                "description" : "He is wearing a short tunic made of a sturdy fabric, such as leather or canvas. The warrior's tunic provides protection and mobility to the wearer, who is likely a soldier, knight, or other fighter. The tunic is typically worn with breeches, boots, and a belt to carry weapons and other equipment."
+            }
+          ]
+        }
+      },
+      "Mental": {
+        "events": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min" : 2,
+          "max" : 3,
+          "nullable": true,
+          "choices": [
+            {
+                "name": "Participated in a battle",
+                "description": "<pronoun> participated in a medieval battle, wielding <possessive_pronoun> weapons and fighting for <possessive_pronoun> kingdom. This experience may have left <object_pronoun> with physical scars and mental trauma, and may have shaped <object_pronoun> into a seasoned warrior."
+            },  
+            {
+                "name": "Survived a plague",
+                "description": "<pronoun> survived a devastating plague that swept through the land, taking many lives and leaving behind destruction. This experience may have given <object_pronoun> a heightened appreciation for life and a stronger resilience in the face of adversity."
+            },  
+            {
+                "name": "Lost a loved one",
+                "description": "<pronoun> lost a loved one, whether it be due to illness, battle, or another cause. This event may have left a deep emotional impact on <object_pronoun> and may continue to shape <object_pronoun>'s life and worldview."
+            },  
+            {
+                "name": "Attended a tournament",
+                "description": "<pronoun> attended a medieval tournament, where knights from across the land gathered to show off their skills and compete for glory. This experience may have inspired <object_pronoun> with the ideals of chivalry and honor."
+            },  
+            {
+                "name": "Fled from danger",
+                "description": "<pronoun> fled from danger, whether it be from invaders, bandits, or some other threat. This experience may have taught <object_pronoun> the value of quick thinking and resourcefulness, as well as the importance of staying alert and vigilant."
+            },
+            {
+              "name": "Experienced a natural disaster",
+              "description": "<pronoun> experienced a natural disaster, such as a hurricane or earthquake, which caused significant damage to <possessive_pronoun> home and community. This event may have had a traumatic effect on <object_pronoun> and may have caused <object_pronoun> to feel anxious or fearful in the future."
+            },
+            {
+              "name": "Lost a loved one",
+              "description": "<pronoun> lost a loved one, such as a parent or spouse, which caused <possessive_pronoun> to experience grief and loss. This event may have had a significant impact on <possessive_pronoun> emotional well-being and may have caused <object_pronoun> to feel lonely or depressed."
+            },
+            {
+              "name": "Suffered a serious injury",
+              "description": "<pronoun> suffered a serious injury, such as a broken bone or head injury, which required medical treatment and a long recovery period. This event may have had a physical and emotional impact on <object_pronoun> and may have caused <object_pronoun> to feel pain or discomfort."
+            },
+            {
+              "name": "Suffered a serious illness",
+              "description": "<pronoun> suffered a serious illness, such as cancer or a chronic condition, which required medical treatment and a long recovery period. This event may have had a physical and emotional impact on <object_pronoun> and may have caused <object_pronoun> to feel weak or vulnerable."
+            },
+            {
+              "name": "Faced a mental health crisis",
+              "description": "<pronoun> faced a mental health crisis, such as a depression or anxiety disorder, which caused <object_pronoun> to feel overwhelmed and distressed. This event may have had a negative impact on <possessive_pronoun> emotional well-being and may have caused <object_pronoun> to feel isolated or helpless."
+            },
+            {
+              "name": "Experienced a failed relationship",
+              "description": "<pronoun> experienced a failed relationship, such as a break-up or divorce, which caused <object_pronoun> feel heartbroken or lonely. This event may have had a significant impact on <possessive_pronoun> emotional well-being and may have caused <object_pronoun> feel uncertain about the future."
+            },
+            {
+              "name": "Experienced a personal conflict",
+              "description": "<pronoun> experienced a personal conflict, such as a disagreement with a family member or friend, which caused <object_pronoun> feel stressed and upset. This event may have had a negative impact on <possessiv_pronoun> relationships and may have caused <object_pronoun> feel isolated or misunderstood."
+            },
+            {
+              "name": "Faced a major health scare",
+              "description": "<pronoun> faced a major health scare, such as a cancer diagnosis or heart attack, which caused <object_pronoun> to feel frightened and uncertain. This event may have had a significant impact on <possessive_pronoun> physical and emotional well-being and may have caused <object_pronoun> to feel vulnerable or helpless."
+            },
+            {
+              "name": "Experienced a personal betrayal",
+              "description": "<pronoun> experienced a personal betrayal, such as a friend or partner cheating on <possessiv_pronoun>, which caused <object_pronoun> feel hurt and betrayed. This event may have had a negative impact on <possessive_pronoun> relationships and may have caused <object_pronoun> feel untrusting or skeptical."
+            }
+          ]
+        },
+        "values": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min" : 1,
+          "max" : 2,
+          "nullable": true,
+          "choices": [
+            {
+              "name": "Loyalty",
+              "description": "<pronoun> is loyal to <possessive_pronoun> friends, family, and loved ones, and is always willing to support and stand by them."
+            },
+            {
+                "name": "Honesty",
+                "description": "<pronoun> is honest and always tells the truth, even when it may be difficult to do so. <pronoun> values honesty and integrity in herself and others."
+            },
+            {
+                "name": "Respect",
+                "description": "<pronoun> values respect and always treats others with kindness and consideration, regardless of their background or beliefs."
+            },
+            {
+                "name": "Compassion",
+                "description": "<pronoun> has a strong sense of compassion and empathy towards others, and is always willing to lend a helping hand to those in need."
+            },
+            {
+                "name": "Determination",
+                "description": "<pronoun> is determined and always sets goals for himself and works hard to achieve them. <pronoun> is not easily discouraged and always perseveres."
+            },
+            {
+                "name": "Independence",
+                "description": "<pronoun> values independence and the ability to make <possessive_pronoun> own decisions and choices. <pronoun> is a strong and confident person who is comfortable standing up for herself."
+            },
+            {
+                "name": "Justice",
+                "description": "<pronoun> values justice and always strives to do what is fair and right. <pronoun> believes in equality and treating all individuals with respect and dignity."
+            },
+            {
+                "name": "Honor",
+                "description": "<pronoun> holds honor as a highly valued trait and strives to maintain a sense of dignity and integrity in all aspects of life."
+            },
+            {
+                "name": "Courage",
+                "description": "<pronoun> demonstrates courage in the face of danger and adversity and is not afraid to stand up for what is right."
+            },
+            {
+                "name": "Chivalry",
+                "description": "<pronoun> follows the code of chivalry and treats others, especially women, with respect, kindness and protection."
+            },
+            {
+                "name": "Religion",
+                "description": "<pronoun> holds deep religious beliefs and values, often dedicating much of <possessive_pronoun> time and resources to worship and devotion."
+            },
+            {
+                "name": "Loyalty to one's King",
+                "description": "<pronoun> is fiercely loyal to the King and is willing to defend the crown against all enemies."
+            },
+            {
+                "name": "Patience",
+                "description": "<pronoun> is a patient individual and believes that good things come to those who wait."
+            },
+            {
+                "name": "Generosity",
+                "description": "<pronoun> is known for <possessive_pronoun> generosity and often donates time, resources and money to those in need."
+            },
+            {
+                "name": "Fairness",
+                "description": "<pronoun> strives to be fair and impartial in all dealings, treating others with equality and justice."
+            },
+            {
+                "name": "Humility",
+                "description": "<pronoun> is a humble person and values modesty, recognizing the strengths and weaknesses in <object_pronoun>self."
+            },
+            {
+                "name": "Bravery",
+                "description": "<pronoun> is a brave individual, never hesitating to face danger and risk <possessive_pronoun> own safety for the greater good."
+            }
+          ]
+        },
+        "beliefs": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min" : 1,
+          "max" : 2,
+          "nullable": true,
+          "choices": [
+            {
+              "name": "In the power of hard work",
+              "description": "<pronoun> believes that hard work and dedication are the key to success and achieving one's goals."
+            },
+            {
+              "name": "In the value of honesty and integrity",
+              "description": "<pronoun> believes that honesty and integrity are important personal qualities that should be upheld in all aspects of life."
+            },
+            {
+              "name": "In the importance of family",
+              "description": "<pronoun> believes that family is a vital source of support and love, and that strong family bonds are essential for happiness and well-being."
+            },
+            {
+              "name": "In the importance of kindness and compassion",
+              "description": "<pronoun> believes that kindness and compassion towards others are essential for creating a more peaceful and harmonious world."
+            },
+            {
+                "name": "In the power of the church",
+                "description": "<pronoun> believes in the authority and influence of the church, and its ability to shape the beliefs and behaviors of the community."
+            },
+            {
+                "name": "In the importance of tradition",
+                "description": "<pronoun> values tradition and the customs passed down from generations, believing that they play a crucial role in shaping their culture and way of life."
+            },
+            {
+                "name": "In the existence of an afterlife",
+                "description": "<pronoun> believes that there is an afterlife, where souls are either punished or rewarded based on their actions in life."
+            },
+            {
+                "name": "In the power of prophecy",
+                "description": "<pronoun> believes that prophecies and omens hold great significance and can foretell future events."
+            }
+          ]
+        },
+        "likes": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min" : 1,
+          "max" : 2,
+          "nullable": true,
+          "choices": [
+            {
+                "name": "Hunting",
+                "description": "<pronoun> enjoys the thrill of the hunt and the challenge of tracking and catching prey. Hunting provides <object_pronoun> with a sense of accomplishment and a connection to nature."
+            },
+            {
+                "name": "Blacksmithing",
+                "description": "<pronoun> has a passion for blacksmithing and spends much of <possessive_pronoun> free time creating weapons, tools, and other objects. The art of blacksmithing gives <object_pronoun> a sense of purpose and fulfillment."
+            },
+            {
+                "name": "Farming",
+                "description": "<pronoun> loves working on the farm, growing crops and raising animals. The simple, hardworking life of a farmer gives <object_pronoun> a sense of stability and comfort."
+            },
+            {
+                "name": "Music",
+                "description": "<pronoun> has a love for music and often plays a musical instrument such as a lute or harp. Music provides <object_pronoun> with a sense of relaxation and joy."
+            },
+            {
+                "name": "Jousting",
+                "description": "<pronoun> enjoys participating in jousting tournaments and is skilled in horseback riding. The excitement and competition of jousting provides <object_pronoun> with a sense of adrenaline and thrill."
+            },
+            {
+                "name": "Traveling",
+                "description": "<pronoun> loves to travel and is always eager to see new places and meet new people. <pronoun> is a seasoned traveler and is comfortable with life on the road."
+            },
+            {
+                "name": "Brewing",
+                "description": "<pronoun> is an expert in brewing and has a deep understanding of different hops, grains, and yeast. <pronoun> creates a variety of ales, meads, and ciders that are prized by locals."
+            },
+            {
+                "name": "Herbalism",
+                "description": "<pronoun> has a vast knowledge of medicinal and aromatic plants and uses this knowledge to create remedies, perfumes, and cosmetics. <pronoun> is sought after for <possessive_pronoun> skills in herbalism."
+            }
+          ]
+        },
+        "dislikes": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min" : 1,
+          "max" : 2,
+          "nullable": true,
+          "choices": [
+            {
+              "name": "Lies",
+              "description": "<pronoun> doesn't like lies and values honesty and integrity in himself and others. <pronoun> believes that honesty is the foundation of trust and respect."
+            },
+            {
+              "name": "Injustice",
+              "description": "<pronoun> doesn't like injustice and is always willing to stand up for what is fair and right. <pronoun> believes in equality and treating all individuals with respect and dignity."
+            },
+            {
+              "name": "Disrespect",
+              "description": "<pronoun> doesn't like disrespect and values kindness and consideration towards others. <pronoun> believes that treating others with respect is essential for creating a positive and harmonious environment."
+            },
+            {
+              "name": "Laziness",
+              "description": "<pronoun> doesn't like laziness and values hard work and dedication. <pronoun> believes that putting effort into one's pursuits is essential for personal and professional growth and development."
+            },
+            {
+              "name": "Cruelty",
+              "description": "<pronoun> doesn't like cruelty and values kindness and compassion towards others. <pronoun> believes that it is important to treat all individuals with respect and empathy."
+            },
+            {
+              "name": "Dishonesty",
+              "description": "<pronoun> doesn't like dishonesty and values honesty and integrity in herself and others. <pronoun> believes that honesty is essential for building trust and maintaining healthy relationships."
+            },
+            {
+              "name": "Spicy food",
+              "description": "<pronoun> doesn't like spicy food and prefers milder flavors. <pronoun> finds that spicy dishes can be too overwhelming and can irritate <possessive_pronoun> stomach."
+            },
+            {
+              "name": "Crowded places",
+              "description": "<pronoun> doesn't like crowded places and prefers more peaceful and quiet environments. <pronoun> finds that crowds can be overwhelming and stressful."
+            },
+            {
+              "name": "Early mornings",
+              "description": "<pronoun> doesn't like early mornings and is a night owl. <pronoun> finds it difficult to wake up early and prefers to stay up late and sleep in."
+            },
+            {
+              "name": "Heights",
+              "description": "<pronoun> doesn't like heights and is afraid of falling or falling from a high place. <pronoun> finds high places to be intimidating and dizzying."
+            },
+            {
+              "name": "Flying",
+              "description": "<pronoun> doesn't like flying and is afraid of planes. <pronoun> finds flying to be stressful and anxiety-inducing, and prefers to travel by land or sea."
+            },
+            {
+              "name": "Mice",
+              "description": "<pronoun> doesn't like mice and is afraid of them. <pronoun> finds them to be dirty and creepy, and doesn't want them in <possessive_pronoun> house."
+            },
+            {
+              "name": "Cilantro",
+              "description": "<pronoun> doesn't like cilantro and finds the taste and smell to be unpleasant. <pronoun> prefers herbs with milder flavors and doesn't use cilantro in <possessive_pronoun> cooking."
+            },
+            {
+                "name": "Religious oppression",
+                "description": "<pronoun> opposes the use of religion as a tool of oppression and doesn't support the idea of a state religion that dominates over others."
+            },
+            {
+                "name": "Dark magic",
+                "description": "<pronoun> fears the power and corruption that often comes with the use of dark magic, and refuses to use it themselves or associate with those who do."
+            },
+            {
+                "name": "Oppression by ruling powers",
+                "description": "<pronoun> is against any form of oppression by ruling powers, whether it be a monarchy, aristocracy, or other form of government."
+            },
+            {
+                "name": "Discrimination based on race or species",
+                "description": "<pronoun> vehemently opposes discrimination based on race or species, believing that all beings deserve equality and respect."
+            },
+            {
+                "name": "Questioning authority",
+                "description": "<pronoun> may struggle with questioning authority, even if they believe that those in power are acting unjustly."
+            }
+          ]
+        },
+        "fears": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min" : 1,
+          "max" : 2,
+          "nullable": true,
+          "choices": [
+            {
+              "name": "Arachnophobia",
+              "description": "<pronoun> has arachnophobia, a fear of spiders. <pronoun> finds spiders to be creepy and unsettling and avoids them as much as possible."
+            },
+            {
+              "name": "Acrophobia",
+              "description": "<pronoun> has acrophobia, a fear of heights. <pronoun> finds high places to be intimidating and dizzying and avoids activities that involve heights."
+            },
+            {
+              "name": "Agoraphobia",
+              "description": "<pronoun> has agoraphobia, a fear of open or public spaces. <pronoun> finds large, open spaces to be overwhelming and anxiety-inducing and avoids them as much as possible."
+            },
+            {
+              "name": "Ophidiophobia",
+              "description": "<pronoun> has ophidiophobia, a fear of snakes. <pronoun> finds snakes to be creepy and unsettling and avoids them as much as possible."
+            },
+            {
+              "name": "Hemophobia",
+              "description": "<pronoun> has hemophobia, a fear of blood. <pronoun> finds blood to be unsettling and stressful and avoids situations that involve blood."
+            },
+            {
+              "name": "Astraphobia",
+              "description": "<pronoun> has astraphobia, a fear of thunder and lightning. <pronoun> finds storms to be intimidating and anxiety-inducing and avoids them as much as possible."
+            },
+            {
+              "name": "Cacophobia",
+              "description": "<pronoun> has cacophobia, a fear of ugliness. <pronoun> finds ugly or disturbing things to be unsettling and avoids them as much as possible."
+            },
+            {
+              "name": "Trypanophobia",
+              "description": "<pronoun> has trypanophobia, a fear of injections. <pronoun> finds needles to be intimidating and anxiety-inducing and avoids medical procedures that involve injections."
+            },
+            {
+              "name": "Necrophobia",
+              "description": "<pronoun> has necrophobia, a fear of death. <pronoun> finds thoughts of death to be unsettling and stressful and avoids situations that may remind <object_pronoun> of death."
+            },
+            {
+                "name": "The unknown",
+                "description": "<pronoun> fears the unknown, particularly in a world full of magic and mythical creatures where the unexpected is a common occurrence."
+            },
+            {
+                "name": "Losing loved ones",
+                "description": "<pronoun> is afraid of losing loved ones, especially in a world where danger and death are ever-present threats."
+            },
+            {
+                "name": "Betrayal",
+                "description": "<pronoun> fears betrayal from those close to them, given the widespread use of deceit and manipulation in the medieval fantasy world."
+            },
+            {
+                "name": "Failure",
+                "description": "<pronoun> fears failure, particularly in a world where the stakes are high and the consequences of failure can be dire."
+            },
+            {
+                "name": "Dark magic and its consequences",
+                "description": "<pronoun> fears the power and consequences of dark magic, both for themselves and for others who may be affected by its use."
+            }
+          ]
+        },
+        "positive qualities": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min": 0,
+          "max" : 2,
+          "nullable": true,
+          "choices": [
+            {
+              "name": "Kindness",
+              "description": "<pronoun> is kind and always tries to help others. <pronoun> is considerate of others' feelings and goes out of <possessive_pronoun> way to be kind and compassionate."
+            },
+            {
+              "name": "Patience",
+              "description": "<pronoun> is patient and able to tolerate delays or difficulties without becoming annoyed or upset. <pronoun> is understanding and willing to wait for things to happen in their own time."
+            },
+            {
+              "name": "Honesty",
+              "description": "<pronoun> is honest and always tells the truth. <pronoun> is trustworthy and reliable, and people know that they can count on <object_pronoun> to be honest with them."
+            },
+            {
+              "name": "Empathy",
+              "description": "<pronoun> is empathetic and able to understand and share the feelings of others. <pronoun> is compassionate and able to put himself in others' shoes, and is able to offer support and understanding to those in need."
+            },
+            {
+              "name": "Respect",
+              "description": "<pronoun> is respectful and always treats others with kindness and consideration. <pronoun> is polite and courteous, and is able to show respect for others' beliefs and opinions."
+            },
+            {
+                "name": "Honor",
+                "description": "<pronoun> holds honor in high regard, striving to live by a code of ethics and principles in a world where such values are often lacking."
+            },
+            {
+                "name": "Compassion",
+                "description": "<pronoun> has a strong sense of compassion, often putting the needs of others before their own in a world filled with suffering and hardship."
+            },
+            {
+                "name": "Bravery",
+                "description": "<pronoun> possesses bravery, willing to face danger and adversity in order to protect what they hold dear and make a positive impact on the world."
+            },
+            {
+                "name": "Wisdom",
+                "description": "<pronoun> is wise, using their knowledge and experience to navigate the complexities and challenges of the medieval fantasy world."
+            },
+            {
+                "name": "Loyalty",
+                "description": "<pronoun> values loyalty, standing by their friends and allies through thick and thin in a world where trust can be difficult to find."
+            }
+          ]
+        },
+        "negative qualities": {
+          "type": "randomChoice",
+          "choicesType": "characteristic",
+          "min" : 0,
+          "max" : 2,
+          "nullable": true,
+          "choices": [
+            {
+              "name": "Anger",
+              "description": "<pronoun> has a quick temper and is prone to anger. <pronoun> has difficulty controlling <possessive_pronoun> emotions and may lash out or become aggressive when upset."
+            },
+            {
+              "name": "Jealousy",
+              "description": "<pronoun> is jealous and envious of others' success or possessions. <pronoun> is resentful of others' good fortune and may try to undermine or sabotage their success."
+            },
+            {
+              "name": "Greed",
+              "description": "<pronoun> is greedy and always wants more. <pronoun> is never satisfied with what <pronoun> has and is constantly seeking more wealth, power, or material possessions."
+            },
+            {
+              "name": "Laziness",
+              "description": "<pronoun> is lazy and avoids work or effort whenever possible. <pronoun> is unmotivated and unwilling to put in the effort required to achieve <possessive_pronoun> goals."
+            },
+            {
+              "name": "Narcissism",
+              "description": "<pronoun> is narcissistic and only concerned with herself. <pronoun> is self-absorbed and has an excessive interest in <possessive_pronoun> own appearance, accomplishments, and well-being."
+            },
+            {
+              "name": "Dishonesty",
+              "description": "<pronoun> is dishonest and untrustworthy. <pronoun> is not truthful and may lie or deceive others for <possessive_pronoun> own benefit."
+            },
+            {
+              "name": "Irresponsibility",
+              "description": "<pronoun> is irresponsible and unreliable. <pronoun> is not dependable and may neglect <possessive_pronoun> duties or obligations."
+            },
+            {
+              "name": "Disrespect",
+              "description": "<pronoun> is disrespectful and lacks regard for others. <pronoun> may be rude or inconsiderate towards others and may ignore their feelings or opinions."
+            },
+            {
+              "name": "Vanity",
+              "description": "<pronoun> is vain and excessively concerned with <possessive_pronoun> own appearance. <pronoun> is self-absorbed and may prioritize <possessive_pronoun> appearance above all else."
+            },
+            {
+              "name": "Impatience",
+              "description": "<pronoun> is impatient and has difficulty waiting for things to happen. <pronoun> may become easily frustrated or annoyed when things don't happen quickly enough."
+            },
+            {
+              "name": "Intolerance",
+              "description": "<pronoun> is intolerant and unwilling to accept or respect the beliefs or opinions of others. <pronoun> may be closed-minded and unwilling to consider other viewpoints."
+            },
+            {
+              "name": "Hypocrisy",
+              "description": "<pronoun> is hypocritical and says one thing but does another. <pronoun> may preach certain values or beliefs, but <possessive_pronoun> actions do not align with these values."
+            },
+            {
+              "name": "Inconsideration",
+              "description": "<pronoun> is inconsiderate and lacks consideration for others. <pronoun> may be thoughtless or careless towards others and their feelings."
+            },
+            {
+              "name": "Irritability",
+              "description": "<pronoun> is irritable and prone to being easily annoyed or agitated. <pronoun> has a short fuse and may become easily frustrated or upset."
+            },
+            {
+                "name": "Arrogance",
+                "description": "<pronoun> may struggle with arrogance, believing themselves to be superior to others and disregarding the opinions and feelings of those around them."
+            },
+            {
+                "name": "Greed",
+                "description": "<pronoun> may have a strong desire for wealth and material possessions, at the expense of others and their own values in a world where resources are often scarce."
+            },
+            {
+                "name": "Vengefulness",
+                "description": "<pronoun> may have a tendency towards vengefulness, seeking revenge against those who have wronged them in a world where violence and retaliation are common responses."
+            },
+            {
+                "name": "Impulsiveness",
+                "description": "<pronoun> may act impulsively, making decisions without fully considering the consequences in a world where caution and forethought are often necessary."
+            },
+            {
+                "name": "Fear",
+                "description": "<pronoun> may struggle with fear, allowing it to control their actions and limit their potential in a world filled with danger and uncertainty."
+            }
+          ]
+        }
+      }
+    },
+    "Config": {
+      "name": "Medieval Fantasy"
+    }
+  }

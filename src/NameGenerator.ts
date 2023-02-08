@@ -2,10 +2,6 @@ import { readFileSync } from "fs";
 import Markov  from "./Markov.js"
 import { LoadText } from "./Utils.js";
 
-import nlp from "compromise"
-import speech from "compromise-speech"
-
-nlp.plugin(speech);
 
 export default class NameGenerator implements LoadText{
     path : string;

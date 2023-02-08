@@ -2,9 +2,11 @@ import { randomChoice } from "./Choice.js";
 
 export default class Markov<T>{
     public data : Map<T,T[]>
+    repeat : number;
     
     constructor(){
         this.data = new Map<T, T[]>();
+        this.repeat = 0;
     }
 
     addStates(states : T[]){
@@ -38,24 +40,46 @@ export default class Markov<T>{
         }
     }
 
-    walk(currentState : T | undefined = undefined){
+    walk(currentState : T | undefined = undefined, exclude : T[] = []){
         if ( !currentState){
             // pegar um estado aleatório inicial
             currentState = randomChoice<T>(
                 Array.from(this.data.keys())
-            );
+                );
+            
+                
+            let to_exclude = exclude.includes(currentState)
+
+            while (to_exclude){
+                to_exclude = exclude.includes(currentState)
+
+                currentState = randomChoice<T>(
+                    Array.from(this.data.keys())
+                );
+            }
+
+            return currentState;
         }
     
         // escolher o proximo baseado nas possibilidades
         const possibilites = this.data.get(currentState);
         if ( possibilites){
-            return randomChoice(possibilites);
+            const next = randomChoice(possibilites);
+
+            if (next === currentState){
+                this.repeat ++;
+            }
+            else{
+                this.repeat = 0;
+            }
+
+            return next;
         }
     
         return undefined;
     }
     
-    generate(max  = 10){
+    generate(max  = 10, exclude_start=[], max_repeat_states=1){
         let lastState : T | null = null;
         const generatedStates : T[] = [];
        
@@ -65,7 +89,7 @@ export default class Markov<T>{
                 currentState = this.walk(lastState)
             }
             else{
-                currentState = this.walk();
+                currentState = this.walk(undefined, exclude_start);
             }
 
             if (currentState == undefined){

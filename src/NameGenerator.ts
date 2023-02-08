@@ -2,16 +2,24 @@ import { readFileSync } from "fs";
 import Markov  from "./Markov.js"
 import { LoadText } from "./Utils.js";
 
+import nlp from "compromise"
+import speech from "compromise-speech"
 
+nlp.plugin(speech);
 
 export default class NameGenerator implements LoadText{
     path : string;
     markov : Markov<string>;
-    static syllableRegex = /[^aeiouy]*[aeiouy]+(?:[^aeiouy]*$|[^aeiouy](?=[^aeiouy]))?/gi;
 
-    constructor(path:  string | undefined = undefined){
+    static syllableRegex = /[^aeiouy]*[aeiouy]+(?:[^aeiouy]*$|[^aeiouy](?=[^aeiouy]))?/gi;
+    exclude_start  : Array<string>;
+    max_repeat_syllables : number;
+
+    constructor(path:  string | undefined = undefined, exclude_start=[], max_repeat_syllables=0){
         this.markov = new Markov<string>();
         this.path = "";
+        this.exclude_start = exclude_start;
+        this.max_repeat_syllables= max_repeat_syllables;
 
         if (path){
             this.loadPath(path);
@@ -33,9 +41,9 @@ export default class NameGenerator implements LoadText{
         );
     }
 
-    syllableSplitter(word : string){
+    syllableSplitter(sentence : string){
         const syllableRegex = /[^aeiouy]*[aeiouy]+(?:[^aeiouy]*$|[^aeiouy](?=[^aeiouy]))?/gi;
-        return word.match(syllableRegex);    
+        return sentence.match(syllableRegex);
     }
     
     prepareData(trainningText : string){
@@ -43,31 +51,21 @@ export default class NameGenerator implements LoadText{
         const sentences = trainningText.split("\n");
     
         for (const sentence of sentences){
-            const words = sentence.split(" ");
+            const syllables = this.syllableSplitter(sentence);
     
-            for (const word of words){
-                const syllables = this.syllableSplitter(word);
-    
-                if (syllables){
-                    for (const syllable of syllables){
-                        data.push(syllable);
-                    }
+            if (syllables){
+                for (const syllable of syllables){
+                    data.push(syllable);
                 }
-                
-                // add spaces between words if is not the last one
-                if (words.indexOf(word) != words.length -1){
-                    data.push(" ");
-                }
+                data.push("\n");
             }
-    
-            data.push("\n");
         }
     
         return data;
     }
     
     generate(max : number){
-        let generated = this.markov.generate(max);
+        let generated = this.markov.generate(max, this.exclude_start);
         let str  : string;
 
         if (!generated){

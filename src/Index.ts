@@ -1,3 +1,5 @@
+import NameGenerator from "./NameGenerator.js"
+
 // Load a base
 export * from "./Character.js" 
 export * from "./CharacterBase.js"

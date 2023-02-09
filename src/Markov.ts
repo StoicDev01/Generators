@@ -79,20 +79,20 @@ export default class Markov<T>{
         return undefined;
     }
     
-    generate(max  = 10, exclude_start=[], max_repeat_states=1){
+    generate(start : T | null = null, max  = 10, exclude_start=[], max_repeat_states=1){
         let lastState : T | null = null;
         const generatedStates : T[] = [];
        
         for (let x = 0; x < max; x++){
-            let currentState : T | undefined;
+            let currentState : T | null = null;
             if (lastState){
                 currentState = this.walk(lastState)
             }
             else{
-                currentState = this.walk(undefined, exclude_start);
+                currentState = this.walk(null, exclude_start);
             }
 
-            if (currentState == undefined){
+            if (currentState == null){
                 // chegamos ao fim
                 return generatedStates;
             }

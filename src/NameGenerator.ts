@@ -61,7 +61,7 @@ export default class NameGenerator implements LoadText{
     }
     
     generate(max : number){
-        let generated = this.markov.generate(max, this.exclude_start);
+        let generated = this.markov.generate(null, max, this.exclude_start);
         let str  : string;
 
         if (!generated){
